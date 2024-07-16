@@ -90,10 +90,13 @@ export const EmployeeForm: React.FC<ProductFormProps> = ({
 
   const onSubmit = async (data: ProductFormValues) => {
     try {
+      console.log('Data', data);
       setLoading(true);
       if (initialData) {
+        console.log('initialData', initialData);
         // await axios.post(`/api/products/edit-product/${initialData._id}`, data);
       } else {
+        console.log('no initialData', initialData);
         // const res = await axios.post(`/api/products/create-product`, data);
         // console.log("product", res);
       }
